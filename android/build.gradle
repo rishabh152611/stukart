@@ -1,0 +1,36 @@
+// Configure the build script repositories and dependencies
+buildscript {
+    repositories {
+        // Repository for Android Gradle plugin and Google services plugin
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Android Gradle plugin dependency
+        classpath 'com.android.tools.build:gradle:7.0.4'
+        // Google Services plugin dependency (for Firebase and other Google services)
+        classpath 'com.google.gms:google-services:4.3.15'
+    }
+}
+
+// Configure repositories for all subprojects/modules
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+// Set custom build directories for the root project and subprojects
+rootProject.buildDir = "../build"
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+// Register a clean task to delete the build directory
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

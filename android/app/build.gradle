@@ -1,0 +1,56 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+    // Removed: id 'com.google.gms.google-services'
+}
+
+android {
+    // Define your app's namespace
+    namespace = "com.example.shopping_l"
+    // Get the compile SDK version and NDK version from Flutter config
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        // It is recommended to pass the jvm target version as a String.
+        jvmTarget = "1.8"
+    }
+
+    defaultConfig {
+        applicationId "com.example.shopping_l"
+        minSdkVersion 23  // Changed from 21 to 23
+        targetSdkVersion flutter.targetSdkVersion
+        versionCode flutter.versionCode
+        versionName flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            // Signing with the debug signing configuration for now.
+            // Replace signingConfigs.debug with your release signing config for production builds.
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    // Points to your Flutter project directory
+    source = "../.."
+}
+
+dependencies {
+    // Use the Firebase BoM to manage firebase dependencies versions
+    implementation platform('com.google.firebase:firebase-bom:33.12.0')
+    // Add your other dependencies here (e.g., firebase-analytics, firebase-auth, etc.)
+}
+
+// Apply the Google Services plugin using the legacy "apply" syntax.
+// This must be at the bottom of the file.
+apply plugin: 'com.google.gms.google-services'

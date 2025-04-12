@@ -1,0 +1,2 @@
+C:/Users/RISHABH PANDEY/Documents/shopping_stu/android/app/.cxx/Debug/h5a584b5/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/RISHABH PANDEY/Documents/shopping_stu/android/app/.cxx/Debug/h5a584b5/arm64-v8a/CMakeFiles/rebuild_cache.dir
