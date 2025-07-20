@@ -91,10 +91,6 @@ Stukart is a streamlined, mobile campus marketplace built with Flutter. It allow
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License.
-
 ---
 
 ## ✉️ Contact
