@@ -1,4 +1,4 @@
-# Stukart — Campus Resource Marketplace
+# Stukart — A Campus Resource Marketplace
 
 Stukart is a streamlined, mobile campus marketplace built with Flutter. It allows students to securely list, buy, and exchange resources right from their phones. With real-time updates, accessible UI, advanced state management, and voice-powered features, Stukart makes campus trading effortless and safe.
 
